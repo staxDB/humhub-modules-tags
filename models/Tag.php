@@ -3,8 +3,7 @@
 namespace humhub\modules\tags\models;
 
 use Yii;
-use humhub\modules\content\components\ContentActiveRecord;
-
+use humhub\components\ActiveRecord;
 /**
  * This is the model class for table "tag".
  *
@@ -13,7 +12,7 @@ use humhub\modules\content\components\ContentActiveRecord;
  * @property string $description
  * @property string $url
  */
-class Tag extends ContentActiveRecord
+class Tag extends ActiveRecord
 {
     /**
      * @inheritdoc
