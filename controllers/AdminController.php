@@ -4,7 +4,6 @@ namespace humhub\modules\tags\controllers;
 
 use Yii;
 use humhub\modules\tags\models\Tag;
-use yii\data\ActiveDataProvider;
 use humhub\modules\admin\components\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,10 +34,10 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        $model = Tag::find()->all();
+        $models = Tag::find()->all();
 
         return $this->render('index', [
-            'model' => $model,
+            'models' => $models,
         ]);
     }
 

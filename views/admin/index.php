@@ -1,11 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
-use yii\helpers\Url;
 
 /* @var $this yii\web\View */
-/* @var $model \humhub\modules\tags\models\Tag */
+/* @var $models [] \humhub\modules\tags\models\Tag */
 
 $this->title = Yii::t('TagsModule.base', 'Tags')
 ?>
@@ -27,10 +25,10 @@ $this->title = Yii::t('TagsModule.base', 'Tags')
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($model as $item): ?>
+            <?php foreach ($models as $item): ?>
                 <tr>
-                    <td><?= $item->id; ?></td>
-                    <td><?= $item->title; ?></td>
+                    <td><?= $item->id ?></td>
+                    <td><?= Html::encode($item->title) ?></td>
                     <td>
                         <?= Html::a('<i class="fa fa-eye view"></i> ' . Yii::t('TagsModule.base', 'View'), ['view', 'id' => $item->id], ['class' => 'btn-sm btn-info']) ?>
                         <?= Html::a('<i class="fa fa-pencil-square-o edit"></i> ' . Yii::t('ExampleModule.base', 'Update'), ['update', 'id' => $item->id], ['class' => 'btn-sm btn-primary']) ?>

@@ -41,10 +41,10 @@ class Tag extends ContentActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'Title'),
-            'description' => Yii::t('app', 'Description'),
-            'url' => Yii::t('app', 'Url'),
+            'id' => Yii::t('TagsModule.models_Tag', 'ID'),
+            'title' => Yii::t('TagsModule.models_Tag', 'Title'),
+            'description' => Yii::t('TagsModule.models_Tag', 'Description'),
+            'url' => Yii::t('TagsModule.models_Tag', 'Url'),
         ];
     }
 }
