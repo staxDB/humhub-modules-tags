@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = Yii::t('TagsModule.base', 'Tags')
 ?>
 <div class="panel panel-default">
-    <div class="panel panel-heading">
+    <div class="panel-heading">
         <h1><?= Html::encode($this->title) ?></h1>
         <p>
             <?= Html::a('<i class="fa fa-pencil-square-o edit"></i> ' . Yii::t('TagsModule.base', 'Create'), ['create'], ['class' => 'btn-sm btn-success']) ?>
@@ -16,18 +16,17 @@ $this->title = Yii::t('TagsModule.base', 'Tags')
     </div>
 
     <div class="panel-body">
+        <?php if (isset($models)): ?>
         <table class="table table-responsive">
             <thead>
             <tr>
-                <th scope="col"><?= Yii::t('TagsModule.models_Tag', 'ID'); ?></th>
-                <th scope="col"><?= Yii::t('TagsModule.models_Tag', 'Title'); ?></th>
-                <th scope="col"><?= Yii::t('TagsModule.base', 'Actions'); ?></th>
+                <th><?= Yii::t('TagsModule.models_Tag', 'Title'); ?></th>
+                <th><?= Yii::t('TagsModule.base', 'Actions'); ?></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($models as $item): ?>
                 <tr>
-                    <td><?= $item->id ?></td>
                     <td><?= Html::encode($item->title) ?></td>
                     <td>
                         <?= Html::a('<i class="fa fa-eye view"></i> ' . Yii::t('TagsModule.base', 'View'), ['view', 'id' => $item->id], ['class' => 'btn-sm btn-info']) ?>
@@ -44,5 +43,6 @@ $this->title = Yii::t('TagsModule.base', 'Tags')
             <?php endforeach; ?>
             </tbody>
         </table>
+        <?php endif; ?>
     </div>
 </div>
