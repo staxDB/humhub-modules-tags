@@ -19,9 +19,9 @@ class Module extends \humhub\components\Module
      */
     public function disable()
     {
-        foreach (Tag::find()->all() as $item) {
-            $item->delete();
-        }
+//        foreach (Tag::find()->all() as $item) {
+//            $item->delete();
+//        }
 
         parent::disable();
     }

@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $models [] \humhub\modules\tags\models\Tag */
 
 $this->title = Yii::t('TagsModule.base', 'Tags')
 ?>

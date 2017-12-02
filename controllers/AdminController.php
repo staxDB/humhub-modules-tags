@@ -34,10 +34,8 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        $models = Tag::find()->all();
-
         return $this->render('index', [
-            'models' => $models,
+            'models' => Tag::find()->all(),
         ]);
     }
 

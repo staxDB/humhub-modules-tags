@@ -20,7 +20,7 @@ class Events extends \yii\base\Object
             'icon' => '<i class="fa fa-tags"></i>',
             'url' => Url::to(['/tags/view']),
             'sortOrder' => 99999,
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'tags' && Yii::$app->controller->id == 'default'),
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'tags' && Yii::$app->controller->id == 'view'),
         ));
     }
 
