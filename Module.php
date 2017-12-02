@@ -12,6 +12,11 @@ class Module extends \humhub\components\Module
     /**
      * @inheritdoc
      */
+    public $resourcesPath = 'resources';
+
+    /**
+     * @inheritdoc
+     */
     public function disable()
     {
         foreach (Tag::find()->all() as $item) {
