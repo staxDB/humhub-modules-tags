@@ -1,0 +1,13 @@
+{
+    "id": "tags",
+    "name": "Tags",
+    "description": "A Module for defining tags with url to show on an overview page.",
+    "keywords": [
+        "tags"
+    ],
+    "version": "0.1",
+    "humhub": {
+        "minVersion": "1.2.3"
+    },
+    "screenshots": ["assets/screen1.jpg"]
+}
