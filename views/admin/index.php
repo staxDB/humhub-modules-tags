@@ -1,8 +1,10 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
+/* @var $models  */
 
 $this->title = Yii::t('TagsModule.base', 'Tags')
 ?>
@@ -29,8 +31,8 @@ $this->title = Yii::t('TagsModule.base', 'Tags')
                     <td><?= Html::encode($item->title) ?></td>
                     <td>
                         <?= Html::a('<i class="fa fa-eye view"></i> ' . Yii::t('TagsModule.base', 'View'), ['view', 'id' => $item->id], ['class' => 'btn-sm btn-info']) ?>
-                        <?= Html::a('<i class="fa fa-pencil-square-o edit"></i> ' . Yii::t('ExampleModule.base', 'Update'), ['update', 'id' => $item->id], ['class' => 'btn-sm btn-primary']) ?>
-                        <?= Html::a('<i class="fa fa-trash-o delete"></i> ' . Yii::t('ExampleModule.base', 'Delete'), ['delete', 'id' => $item->id], [
+                        <?= Html::a('<i class="fa fa-pencil-square-o edit"></i> ' . Yii::t('TagsModule.base', 'Update'), ['update', 'id' => $item->id], ['class' => 'btn-sm btn-primary']) ?>
+                        <?= Html::a('<i class="fa fa-trash-o delete"></i> ' . Yii::t('TagsModule.base', 'Delete'), ['delete', 'id' => $item->id], [
                             'class' => 'btn-sm btn-danger',
                             'data' => [
                                 'confirm' => Yii::t('TagsModule.base', 'Are you sure you want to delete this item?'),

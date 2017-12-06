@@ -16,14 +16,13 @@ $this->title = Yii::t('TagsModule.base', 'Tags')
 
         <div class="panel-body">
            <?php foreach ($models as $tag): ?>
-            <div class="col-md-2">
-                <div class="list-group">
-                    <div class="list-group-item">
-                        <a class="btn btn-info" href="<?= Html::encode($tag->url); ?>" role="button"><i class="fa fa-tag"></i> <?= Html::encode($tag->title); ?></a>
-                    </div>
-                </div>
-            </div>
+                        <?= Html::a('<i class="fa fa-tag"></i> ' . HTML::encode($tag->title), $tag->url, ['class'=>'btn btn-info', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => $tag->description, 'style' => 'margin: 5px;']) ?>
             <?php endforeach; ?>
+            <script>
+                $(document).ready(function() {
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
         </div>
     </div>
 </div>
