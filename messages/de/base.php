@@ -11,4 +11,6 @@ return array(
     'View' => 'Anzeigen',
     'Actions' => 'Aktionen',
     'Are you sure you want to delete this item?' => 'Willst du diesen Tag wirklich löschen?',
+    'Simple Module for adding Tags-page' => 'Einfaches Modul zum Hinzufügen einer Tags-Seite',
+    'Create Tag' => 'Tag anlegen'
 );
