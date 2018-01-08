@@ -16,7 +16,7 @@ class Events extends \yii\base\Object
     public static function onTopMenuInit($event)
     {
         $event->sender->addItem(array(
-            'label' => "Tags",
+            'label' => Yii::t('TagsModule.base', 'Search Suggestions'),
             'icon' => '<i class="fa fa-tags"></i>',
             'url' => Url::to(['/tags/view']),
             'sortOrder' => 99999,

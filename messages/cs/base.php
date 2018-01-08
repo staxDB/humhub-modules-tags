@@ -17,18 +17,17 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Actions' => '',
+    'Are you sure you want to delete this item?' => '',
+    'Back to overview' => '',
+    'Create' => '',
+    'Create Tag' => '',
+    'Delete' => '',
+    'Save' => '',
+    'Simple Module for adding Tags-page' => '',
     'Tag' => '',
-    'Actions' => 'Aktionen',
-    'Are you sure you want to delete this item?' => 'Willst du diesen Tag wirklich löschen?',
-    'Back to overview' => 'Zurück zur Übersicht',
-    'Create' => 'Anlegen',
-    'Create Tag' => 'Tag anlegen',
-    'Delete' => 'Löschen',
-    'Save' => 'Speichern',
-    'Simple Module for adding Tags-page' => 'Einfaches Modul zum Hinzufügen einer Tags-Seite',
-    'Tags' => 'Tags',
-    'Update' => 'Bearbeiten',
-    'Update {modelClass}: ' => 'Bearbeite {modelClass}: ',
-    'View' => 'Anzeigen',
-    'Search Suggestions' => 'Suchvorschläge'
+    'Tags' => '',
+    'Update' => '',
+    'Update {modelClass}: ' => '',
+    'View' => '',
 ];
