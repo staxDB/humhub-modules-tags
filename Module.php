@@ -2,7 +2,6 @@
 
 namespace humhub\modules\tags;
 
-use humhub\modules\tags\models\Tag;
 use yii\helpers\Url;
 use Yii;
 

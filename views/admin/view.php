@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\helpers\Url;
+use humhub\widgets\Button;
 
 /* @var $this yii\web\View */
 /* @var $model humhub\modules\tags\models\Tag */
@@ -37,6 +38,7 @@ $this->title = $model->title;
         ]) ?>
     </br>
     <div >
-        <?= Html::a(Yii::t('TagsModule.base', 'Back to overview'), Url::to('/tags/admin/index'), ['class' => 'btn-sm btn-default']) ?>
+        <?= Button::defaultType(Yii::t('TagsModule.base', 'Back to overview'))->link(Url::to(['/admin/module']))->loader(false); ?>
+
     </div>
 </div>
