@@ -4,8 +4,9 @@ namespace humhub\modules\tags;
 
 use Yii;
 use yii\helpers\Url;
+use yii\base\BaseObject;
 
-class Events
+class Events extends BaseObject
 {
 
     /**
