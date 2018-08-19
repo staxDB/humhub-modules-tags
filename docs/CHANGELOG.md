@@ -1,12 +1,16 @@
 Changelog
 =========
-08.08.2018
+v0.2.1
+----------------------
+- Updated to yii/base/BaseObject
+
+v0.2
 ----------------------
 - Release: v0.2
   - Ready for Humhub v1.3
-  - Ready for PHP 7.2
+  - Ready for PHP 7.2 (Removed yii/base/Object)
 
-08.01.2018
+v0.1
 ----------------------
 - Release: First release version 0.1
 
