@@ -5,12 +5,11 @@ namespace humhub\modules\tags\models;
 use Yii;
 use humhub\components\ActiveRecord;
 /**
- * This is the model class for table "tag".
+ * This is the model class for table "custom_tag".
  *
  * @property integer $id
  * @property string $title
- * @property string $description
- * @property string $url
+ * @property string $keyword
  */
 class Tag extends ActiveRecord
 {
@@ -19,7 +18,7 @@ class Tag extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'tag';
+        return 'custom_tag';
     }
 
     /**
@@ -28,9 +27,8 @@ class Tag extends ActiveRecord
     public function rules()
     {
         return [
-            [['description'], 'string'],
             [['title'], 'string', 'max' => 60],
-            [['url'], 'string', 'max' => 255],
+            [['keyword'], 'string', 'max' => 50],
         ];
     }
 
@@ -42,8 +40,7 @@ class Tag extends ActiveRecord
         return [
             'id' => Yii::t('TagsModule.models_Tag', 'ID'),
             'title' => Yii::t('TagsModule.models_Tag', 'Title'),
-            'description' => Yii::t('TagsModule.models_Tag', 'Description'),
-            'url' => Yii::t('TagsModule.models_Tag', 'Url'),
+            'keyword' => Yii::t('TagsModule.models_Tag', 'Keyword'),
         ];
     }
 }

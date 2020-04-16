@@ -32,13 +32,11 @@ $this->title = $model->title;
             'attributes' => [
                 'id',
                 'title',
-                'description:ntext',
-                'url:url',
+                'keyword',
             ],
         ]) ?>
     </br>
     <div >
-        <?= Button::defaultType(Yii::t('TagsModule.base', 'Back to overview'))->link(Url::to(['/admin/module']))->loader(false); ?>
-
+        <?= Button::defaultType(Yii::t('TagsModule.base', 'Back to overview'))->link(Url::to(['/tags/admin/config']))->loader(false); ?>
     </div>
 </div>

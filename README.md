@@ -1,8 +1,15 @@
 ## Description
-Simple Tag Module.
+Simple Tag Module that creates an overview of custom created search tags. 
+It is also configurable to include existing content tags.
 
 __Module website:__ <https://github.com/staxDB/humhub-modules-tags>    
 __Author:__ David Born ([staxDB](https://github.com/staxDB))
+
+### v0.3.* Works with
+- Humhub version 1.4.*
+    - Added existing content tags to overview (if configured)
+    - Updated tag table name and refactored structure
+    - Need to run migrations!
 
 ### v0.2.* Works with
 - Humhub version 1.3.*
@@ -18,5 +25,3 @@ __Author:__ David Born ([staxDB](https://github.com/staxDB))
 
 ## ToDos
 - Security & permission management
-- add description part
-- generate tags automatically/dynamically
