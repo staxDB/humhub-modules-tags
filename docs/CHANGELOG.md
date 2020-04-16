@@ -1,5 +1,12 @@
 Changelog
 =========
+v0.3
+----------------------
+- Added support for humhub v1.4
+- Added configurable option to include existing content tags
+- Updated table name tag -> custom_tag
+- Removed url and description from tag model and added keyword
+    
 v0.2.2
 ----------------------
 - Removed Deprecations:

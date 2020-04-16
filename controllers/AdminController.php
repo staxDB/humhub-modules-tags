@@ -3,7 +3,9 @@
 namespace humhub\modules\tags\controllers;
 
 use Yii;
+use humhub\modules\admin\permissions\ManageModules;
 use humhub\modules\tags\models\Tag;
+use humhub\modules\tags\models\forms\ConfigForm;
 use humhub\modules\admin\components\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -29,12 +31,41 @@ class AdminController extends Controller
     }
 
     /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getAccessRules()
+    {
+        return [['permissions' => ManageModules::class]];
+    }
+
+    /**
      * Lists all Tag models.
      * @return mixed
      */
     public function actionIndex()
     {
-        return $this->render('index', [
+        $model = new ConfigForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $this->view->saved();
+        }
+
+        return $this->render('@tags/views/common/defaultConfig', [
+            'model' => $model
+        ]);
+    }
+
+    public function actionConfig()
+    {
+        return $this->render('@tags/views/admin/index', [
             'models' => Tag::find()->all(),
         ]);
     }
@@ -98,7 +129,7 @@ class AdminController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['config']);
     }
 
     /**
